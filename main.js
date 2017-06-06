@@ -2,8 +2,13 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // A:
 
-function max(){
-    // Your answer here
+function max(num1, num2){
+  // i set this as >= to account for any ties since there is nothing in the instructions for ties
+  if (num1 >= num2) {
+    return num1;
+  } else {
+    return num2;
+  }
 }
 
 
@@ -11,8 +16,14 @@ function max(){
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // A:
 
-function maxOfThree(){
-    // Your answer here
+function maxOfThree(num1, num2, num3){
+    if (num1 >= num2 && num1 >= num3) {
+      return num1;
+    } else if (num2 >= num1 && num2 >= num3){
+      return num2;
+    } else {
+      return num3;
+    }
 }
 
 
@@ -21,7 +32,11 @@ function maxOfThree(){
 // A:
 
 function isVowel(char){
-    // Your answer here
+    if (char === 'a' || char === 'A' || char === 'e' || char === 'E' || char === 'i' || char === 'I' || char === 'o' || char === 'O' || char === 'u' || char === 'U' || char === 'y' || char === 'Y') {
+      return true;
+    } else {
+      return false;
+    }
 }
 
 
@@ -29,19 +44,26 @@ function isVowel(char){
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // A:
 
+function sum(num1, num2) {
+  return num1 + num2;
+}
 
 
 // 5.
 // Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
 // A:
 
-
+function avg(num1, num2, num3) {
+  return (num1 + num2 + num3) / 3;
+}
 
 // 6.
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // A:
 
-
+function getLength(string) {
+  return string.length;
+}
 
 // 7.
 // Write a function called `greaterThan` that takes two parameters
@@ -49,7 +71,13 @@ function isVowel(char){
 // Otherwise the function should return `false`.
 // A:
 
-
+function greaterThan(num1, num2) {
+  if (num1 >= num2) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 // 8.
 // Write a function called `greet` that takes a
@@ -58,7 +86,9 @@ function isVowel(char){
 // is the parameter that was passed in.
 // A:
 
-
+function greet(name) {
+  return 'Hello, ' + name + '!';
+}
 
 // 9.
 // Write a function called `madlib` that takes 4 or more parameters (words).
@@ -68,3 +98,7 @@ function isVowel(char){
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // A:
+
+function madlib(mansName, noun1, noun2, place) {
+  return mansName + ' took his ' + noun1 + ' and his ' + noun2 + ' and went ' + place + '!';
+}
